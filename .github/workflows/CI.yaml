@@ -43,4 +43,4 @@ jobs:
         context: ./publish
         file: EMSApi/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/EMSApp:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/emsapp:latest
