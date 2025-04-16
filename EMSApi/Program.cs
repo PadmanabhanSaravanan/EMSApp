@@ -95,6 +95,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Configure the HTTP request pipeline.
+if (app.Environment.IsProduction())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 //using (var serviceScope = app.Services.CreateScope())
 //{
 //    // if db exist and up to date migrations are applied then dont apply.

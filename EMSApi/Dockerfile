@@ -16,8 +16,7 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 # Expose the ports the app listens on
-EXPOSE 5178
-EXPOSE 7178
+EXPOSE 80
 
 # Set the entry point for the container
 ENTRYPOINT ["dotnet", "EMSApi.dll"]
