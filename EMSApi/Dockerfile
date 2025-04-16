@@ -15,8 +15,9 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build /app/out .
 
-# Expose the port the app runs on
-EXPOSE 80
+# Expose the ports the app listens on
+EXPOSE 5178
+EXPOSE 7178
 
 # Set the entry point for the container
 ENTRYPOINT ["dotnet", "EMSApi.dll"]
